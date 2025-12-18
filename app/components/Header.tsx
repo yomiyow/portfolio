@@ -24,7 +24,7 @@ const Header = () => {
       </div>
       <div className="navbar-end">
         <div className="tooltip tooltip-bottom" data-tip="Download">
-          <button className="btn btn-sm btn-ghost">Resume</button>
+          <a href="/romeo-resume.pdf" download="romeo-resume" className="btn btn-sm btn-ghost">Resume</a>
         </div>
       </div>
     </div>
