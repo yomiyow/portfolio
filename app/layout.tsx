@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Home",
   description: "",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface RootLayoutProps {
   children: React.ReactNode;
-}>) {
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body>
-        <div className="navbar bg-base-100 shadow-sm">
-          <a className="btn btn-ghost text-xl uppercase">Romeo</a>
-        </div>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
-}
+};
