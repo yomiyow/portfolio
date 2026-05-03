@@ -1,6 +1,34 @@
+'use client'
+
+import { useEffect, useState } from "react";
+import NavItems from "./NavItems";
+
 const Header = () => {
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section[id]');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      {
+        rootMargin: '-50% 0px -50% 0px',
+        threshold: 0,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="navbar bg-base-100 shadow-sm fixed">
+    <div className="navbar bg-base-100 shadow-sm fixed z-10">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -9,17 +37,13 @@ const Header = () => {
           <ul
             tabIndex={-1}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-            <li><a>Item 1</a></li>
-            <li><a>Item 1</a></li>
-            <li><a>Item 3</a></li>
+            <NavItems activeSection={activeSection} />
           </ul>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li><a>Item 1</a></li>
-          <li><a>Item 1</a></li>
-          <li><a>Item 3</a></li>
+          <NavItems activeSection={activeSection} />
         </ul>
       </div>
       <div className="navbar-end">
