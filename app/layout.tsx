@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { ThemeProvider } from "./context/ThemeContext";
-import ThemeWrapper from "./components/ThemeWrapper";
-
-export const metadata: Metadata = {
+import { ThemeProvider } from "./context/ThemeContext"; export const metadata: Metadata = {
   title: "itsmeromeo.dev",
   description: "",
   icons: {
@@ -19,14 +16,25 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                let theme = localStorage.getItem('theme');
+                if (!theme) theme = 'light';
+                document.documentElement.setAttribute('data-theme', theme);
+              } catch (e) {}
+            `,
+          }}
+        />
+      </head>
       <body>
         <ThemeProvider>
-          <ThemeWrapper>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-          </ThemeWrapper>
+          <Header />
+          <main>{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

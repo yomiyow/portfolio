@@ -1,21 +1,32 @@
 'use client';
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 type Theme = 'light' | 'dracula';
 
-interface ThemeContextType {
+interface ThemeContext {
   theme: Theme;
   toggleTheme: () => void;
 };
 
-export const ThemeContext = createContext<ThemeContextType | null>(null);
+export const ThemeContext = createContext<ThemeContext | null>(null);
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState<Theme>('light');
 
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as Theme | null;
+    if (savedTheme)
+      setTheme(savedTheme);
+  }, []);
+
   const toggleTheme = () => {
-    setTheme((prev) => prev === 'dracula' ? 'light' : 'dracula');
+    setTheme((prev) => {
+      const newTheme = prev === 'dracula' ? 'light' : 'dracula';
+      localStorage.setItem('theme', newTheme);
+      document.documentElement.setAttribute('data-theme', newTheme);
+      return newTheme;
+    });
   };
 
   return (
