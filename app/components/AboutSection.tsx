@@ -1,4 +1,4 @@
-import TechStackCard from "./TeckStackCard";
+import TechStackCard from "./TechStackCard";
 
 const AboutSection = () => {
   return (
