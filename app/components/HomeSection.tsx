@@ -1,4 +1,5 @@
 import Image from "next/image";
+import profilePic from "../../public/images/profile.png";
 
 const HomeSection = () => {
   return (
@@ -8,12 +9,13 @@ const HomeSection = () => {
           {/* content */}
           <figure className="max-w-100 rounded-2xl">
             <Image
-              src="/images/profile.png"
+              src={profilePic}
               alt="Profile Picture"
               width={200}
               height={200}
               priority
               className="w-auto h-auto"
+              placeholder="blur"
             />
           </figure>
           {/* 8 empty divs needed for the 3D effect */}

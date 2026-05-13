@@ -13,7 +13,7 @@ const TechStackCard = ({ src, title }: TeckStackCardProps) => {
           <Image
             className="w-10 sm:lg-20 h-auto"
             src={src}
-            alt="React"
+            alt={title}
             width={80}
             height={80}
           />
