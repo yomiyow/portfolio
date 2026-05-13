@@ -2,9 +2,19 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { ThemeProvider } from "./context/ThemeContext"; export const metadata: Metadata = {
-  title: "itsmeromeo.dev",
-  description: "",
+import { ThemeProvider } from "./context/ThemeContext";
+
+export const metadata: Metadata = {
+  title: "itsmeromeo.dev | Romeo's Portfolio",
+  description: "Portfolio of Romeo, a Software Developer.",
+  keywords: ["Software Developer", "React", "Web Developer", "Romeo"],
+  openGraph: {
+    title: "itsmeromeo.dev",
+    description: "Portfolio of Romeo, a Software Developer.",
+    url: "https://itsmeromeo.dev",
+    siteName: "Romeo's Portfolio",
+    type: "website",
+  },
   icons: {
     icon: '/images/profile.png'
   }
