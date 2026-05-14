@@ -3,7 +3,7 @@ import Image from "next/image";
 const ProjectSection = () => {
   return (
     <section id="project" className="flex flex-col items-center min-h-screen">
-      <h2 className="text-5xl mt-24 mb-5 lg:mb-24">Projects</h2>
+      <h2 className="text-4xl font-bold mt-24 mb-5 lg:mb-24">Projects</h2>
       <div className="flex flex-col-reverse xl:flex-row-reverse gap-20 p-4">
         <div className="mockup-browser border border-base-300 w-full">
           <div className="mockup-browser-toolbar">

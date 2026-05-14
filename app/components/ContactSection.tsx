@@ -1,7 +1,7 @@
 const ContactSection = () => {
   return (
     <section id="contact" className="flex flex-col items-center min-h-screen">
-      <h2 className="text-5xl mt-24 mb-5 lg:mb-24">Contact</h2>
+      <h2 className="text-4xl font-bold mt-24 mb-5 lg:mb-24">Contact</h2>
       <div className="hero-content flex flex-col-reverse xl:flex-row-reverse gap-20">
         <section className="text-center py-20">
           <p className="mt-3 text-base-content/70 max-w-md mx-auto">
