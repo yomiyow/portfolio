@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://itsmeromeo.dev/sitemap.xml',
+    sitemap: 'https://itsromeo.dev/sitemap.xml',
   };
 }
