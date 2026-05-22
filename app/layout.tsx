@@ -14,6 +14,14 @@ export const metadata: Metadata = {
     url: "https://itsmeromeo.dev",
     siteName: "Romeo's Portfolio",
     type: "website",
+    images: [
+      {
+        url: "https://itsromeo.dev/images/profile.png",
+        width: 1200,
+        height: 630,
+        alt: "Romeo Portfolio",
+      },
+    ],
   },
   icons: {
     icon: '/images/profile.png'
