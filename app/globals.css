@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @plugin "daisyui" {
   themes: all;
   root: ":root";
@@ -10,5 +11,6 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: Consolas, "Courier New", monospace;;
+  font-family: 'Inter', sans-serif;
+  ;
 }

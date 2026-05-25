@@ -17,7 +17,7 @@ const AboutSection = () => {
           <TechStackCard src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/zustand/zustand-original.svg" title="Zustand" />
         </div>
         <div className="max-w-[490px]">
-          <div className="text-justify">
+          <div className="text-justify leading-8">
             <p>
               Romeo is a developer who does not drink enough water, nor does he sleep on time, but he somehow still believes debugging at 2AM is a personality trait.
             </p>
