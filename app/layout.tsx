@@ -5,13 +5,13 @@ import Footer from "./components/Footer";
 import { ThemeProvider } from "./context/ThemeContext";
 
 export const metadata: Metadata = {
-  title: "itsmeromeo.dev | Romeo's Portfolio",
+  title: "itsromeo.dev | Romeo's Portfolio",
   description: "Portfolio of Romeo, a Software Developer.",
   keywords: ["Software Developer", "React", "Web Developer", "Romeo"],
   openGraph: {
-    title: "itsmeromeo.dev",
+    title: "itsromeo.dev",
     description: "Portfolio of Romeo, a Software Developer.",
-    url: "https://itsmeromeo.dev",
+    url: "https://itsromeo.dev",
     siteName: "Romeo's Portfolio",
     type: "website",
     images: [
