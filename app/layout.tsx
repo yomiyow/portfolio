@@ -45,7 +45,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             __html: `
               try {
                 let theme = localStorage.getItem('theme');
-                if (!theme) theme = 'light';
+                if (!theme) theme = 'dracula';
                 document.documentElement.setAttribute('data-theme', theme);
               } catch (e) {}
             `,
