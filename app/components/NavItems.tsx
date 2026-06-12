@@ -1,16 +1,9 @@
-const navLinks = [
-  { href: '#home', label: 'Home' },
-  { href: '#about', label: 'About' },
-  { href: '#project', label: 'Projects' },
-  { href: '#certificate', label: 'Certificates' },
-  { href: '#contact', label: 'Contact' },
-];
+import { navigations } from '../constants';
 
 const NavItems = ({ activeSection }: { activeSection: string }) => {
   return (
     <>
-      {navLinks.map(({ href, label }) => {
-        const id = href.replace('#', '');
+      {navigations.map(({ id, href, label }) => {
         const linkClass = activeSection === id ? 'menu-active' : '';
 
         return (

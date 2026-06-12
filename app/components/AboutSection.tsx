@@ -1,9 +1,10 @@
 import TechStackCard from "./TechStackCard";
+import { capitalize, SECTION_IDS } from "../constants";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="flex flex-col items-center min-h-screen">
-      <h2 className="text-4xl font-bold mt-24 mb-5 lg:mb-24">About</h2>
+    <section id={SECTION_IDS.ABOUT} className="flex flex-col items-center min-h-screen">
+      <h2 className="text-4xl font-bold mt-24 mb-5 lg:mb-24">{capitalize(SECTION_IDS.ABOUT)}</h2>
       <div className="hero-content flex flex-col-reverse xl:flex-row-reverse gap-20">
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-5 gap-y-5 lg:gap-y-16">
           <TechStackCard src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" title="React" />
