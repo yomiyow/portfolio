@@ -41,3 +41,12 @@ export const SOCIAL = {
   GITHUB: 'https://github.com/yomiyow',
   EMAIL: 'romeoquinones4@gmail.com',
 } as const;
+
+export const PROJECT_LINK = {
+  OSAS: 'https://osascomplaints.dev',
+  KUBERNETES: 'https://github.com/GoogleCloudPlatform/microservices-demo',
+  RECIPE_APP: 'https://github.com/yomiyow/recipe-app#-demo',
+  FLASHCARD_APP: 'https://github.com/yomiyow/flashcard-app#-demo',
+  CCMS: 'https://github.com/yomiyow/citizen-complaint-management-system#citizen-complaint-management-system-ccms',
+  LMS: 'https://github.com/yomiyow/library-management-system#-library-management-system',
+} as const;
