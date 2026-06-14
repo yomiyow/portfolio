@@ -3,7 +3,7 @@ import { capitalize, SECTION_IDS } from "../constants";
 
 const ProjectSection = () => {
   return (
-    <section id={SECTION_IDS.PROJECTS} className="flex flex-col items-center min-h-screen gap-10">
+    <section id={SECTION_IDS.PROJECTS} className="flex flex-col items-center">
       <h2 className="text-4xl font-bold mt-24 mb-5 lg:mb-10">{capitalize(SECTION_IDS.PROJECTS)}</h2>
       {/* Osas */}
       <div className="flex flex-col items-center justify-between gap-4 p-4 w-full max-w-6xl mx-auto">
