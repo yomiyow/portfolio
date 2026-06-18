@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { capitalize, SECTION_IDS } from '../constants';
+import AnimateOnScroll from './AnimateOnScroll';
 
 const certificates = [
   {
@@ -16,8 +17,9 @@ const certificates = [
 
 const CertificateSection = () => {
   return (
-    <section id={SECTION_IDS.CERTIFICATES} className="flex flex-col items-center">
-      <h2 className="text-4xl font-bold mt-24 mb-5 lg:mb-10">{capitalize(SECTION_IDS.CERTIFICATES)}</h2>
+    <section id={SECTION_IDS.CERTIFICATES} className="flex flex-col items-center w-full">
+      <AnimateOnScroll className="flex flex-col items-center w-full">
+        <h2 className="text-4xl font-bold mt-24 mb-5 lg:mb-10">{capitalize(SECTION_IDS.CERTIFICATES)}</h2>
       <div className="flex flex-col lg:flex-row gap-8 items-center justify-center w-full max-w-6xl p-4">
         {certificates.map((cert, index) => (
           <div key={index} className="hover-3d cursor-pointer">
@@ -43,6 +45,7 @@ const CertificateSection = () => {
           </div>
         ))}
       </div>
+      </AnimateOnScroll>
     </section>
   )
 }

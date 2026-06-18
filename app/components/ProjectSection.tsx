@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { capitalize, SECTION_IDS, PROJECT_LINK } from "../constants";
+import AnimateOnScroll from "./AnimateOnScroll";
 
 const ProjectSection = () => {
   return (
-    <section id={SECTION_IDS.PROJECTS} className="flex flex-col items-center">
-      <h2 className="text-4xl font-bold mt-24 mb-5 lg:mb-10">{capitalize(SECTION_IDS.PROJECTS)}</h2>
+    <section id={SECTION_IDS.PROJECTS} className="flex flex-col items-center w-full">
+      <AnimateOnScroll className="flex flex-col items-center w-full">
+        <h2 className="text-4xl font-bold mt-24 mb-5 lg:mb-10">{capitalize(SECTION_IDS.PROJECTS)}</h2>
       {/* Osas */}
       <div className="flex flex-col items-center justify-between gap-4 p-4 w-full max-w-6xl mx-auto">
         <div className="mockup-browser border border-base-300 w-full">
@@ -194,6 +196,7 @@ const ProjectSection = () => {
           </a>
         </li>
       </ul>
+      </AnimateOnScroll>
     </section>
   );
 };

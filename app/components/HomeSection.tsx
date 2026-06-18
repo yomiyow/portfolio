@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import profilePic from "../../public/images/profile.png";
 import { SECTION_IDS, SOCIAL } from "../constants";
+import AnimateOnScroll from "./AnimateOnScroll";
 
 const HomeSection = () => {
   return (
     <section id={SECTION_IDS.HOME} className="hero min-h-screen">
-      <div className="hero-content flex-col lg:flex-row-reverse">
+      <AnimateOnScroll className="hero-content flex-col lg:flex-row-reverse w-full">
         <div className="hover-3d">
           {/* content */}
           <figure className="max-w-100 rounded-2xl">
@@ -69,7 +70,7 @@ const HomeSection = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </AnimateOnScroll>
     </section>
   );
 };
